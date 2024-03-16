@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+<link
+rel="stylesheet" href="style2.css"
+/>
+    <style>
+       @media (max-width:2500px){
+        body{
+            background-color: pink;
+            display:flex;
+            height:100vh;
+            align-items:center;
+            justify-content: center;
+        }
+        html, body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+}
+      .div1{
+        background-color: pink;
+        display:block;
+        height: 400px;
+        width: 300px;
+      }
+      img{
+        position:relative;
+        left:50px;
+        top:10px;
+        height: 200px;
+        width: 200px;
+      }
+      .yes{
+        margin-left:100px;
+        margin-right:20px;
+      }
+      h2{
+        margin-left: 50px;
+      }
+      button{
+        border-radius: 20%;
+        background-color: white;
+        width:40px;
+        font-weight: bold;
+      }
+
+     
+       }
+    </style>
+</head>
+<body>
+    <div class="div1">
+        <img class="img1" src="./Couple Massage Sticker - Couple Massage Relax - Discover & Share GIFs.gif">
+        <h2>Ab Na Bol K Dikha 😏</h2>
+        <a href="https://abhishek-1773.github.io/firstOne.github.io/"><button class="yes">yes</button></a>
+        <button id="myButton">No</button>
+
+        <script>
+        document.getElementById('myButton').addEventListener('click', function() {
+    var button = this;
+    var windowWidth = window.innerWidth;
+    var windowHeight = window.innerHeight;
+    var buttonWidth = button.offsetWidth;
+    var buttonHeight = button.offsetHeight;
+
+    // Ensure button dimensions don't exceed viewport dimensions
+    if (buttonWidth > windowWidth) {
+        buttonWidth = windowWidth;
+    }
+    if (buttonHeight > windowHeight) {
+        buttonHeight = windowHeight;
+    }
+
+    // Calculate the maximum allowable position without going out of the screen
+    var maxX = windowWidth - buttonWidth;
+    var maxY = windowHeight - buttonHeight;
+
+    // Generate random coordinates within the visible area
+    var randomX = Math.floor(Math.random() * maxX);
+    var randomY = Math.floor(Math.random() * maxY);
+
+    // Set the button's position
+    button.style.position = 'absolute';
+    button.style.left = randomX + 'px';
+    button.style.top = randomY + 'px';
+
+});
+        
+      </script>
+      </script>
+    </div>
+   
+
+
+</body>
+</html>
